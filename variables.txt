@@ -18,6 +18,7 @@ Signals:
 	SF
 	UF
 	OF
+	ZF
 Program counter (PC0-PC3)
 
 1) Read file
