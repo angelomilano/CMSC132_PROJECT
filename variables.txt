@@ -23,3 +23,15 @@ Program counter (PC0-PC3)
 1) Read file
 2) Convert opcodes into instructions and store the instructions into an ARRAY
 3) Decode each instructions and store variables
+
+Insert all the instructions in an array
+ready first instruction
+for fetch, these are the conditions:
+	if in the current clock cycle has M (memory access)
+		stall
+		wait for the clock cycle wherein M is finished
+		clock rise (meaning fetch is successful)
+		point the location in the array where the value must be placed
+	otherwise
+		clock rise (meaning fetch is successful)
+		point the location in the array where the value must be placed
