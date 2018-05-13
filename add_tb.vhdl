@@ -4,17 +4,24 @@ use IEEE.numeric_std.all;
 use STD.textio.all;
 
 entity add is 
-      --add 
+end add;
+
+architecture behav of add is
+	component add
       port(
             add1,add2: in std_logic_vector(1 downto 0);
             carry_in: in std_logic_vector(1 downto 0);
             sum: out std_logic_vector(1 downto 0);
             carry_out: out std_logic_vector(1 downto 0);
             overflow: out bit -- overflow flag
-      );
-end add;
+      );	
+	end component;
+	signal add1, add2: std_logic_vector(1 downto 0);
+	signal carry_in: std_logic_vector(1 downto 0);
+	signal sum: std_logic_vector(1 downto 0);
+	signal carry_out: std_logic_vector(1 downto 0);
+	signal overflow: bit;
 
-architecture behav of add is
 	begin
       process(add1, add2, carry_in)  --addition
       begin

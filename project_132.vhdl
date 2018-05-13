@@ -36,7 +36,7 @@ component add is
             add1,add2: in std_logic_vector(1 downto 0);
             carry_in: in std_logic_vector(1 downto 0);
             sum: out std_logic_vector(1 downto 0);
-            carry_out: out std_logic_vector(1 downto 0)
+            carry_out: out std_logic_vector(1 downto 0);
             overflow: out bit -- overflow flag
       );
 end component;
